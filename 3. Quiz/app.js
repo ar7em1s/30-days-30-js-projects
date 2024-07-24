@@ -35,6 +35,15 @@ const questions = [
       { text: "World War I", correct: false },
     ],
   },
+  {
+    question: "What was Walt Disney afraid of?",
+    answers: [
+      { text: "Darkness", correct: false },
+      { text: "Dentists", correct: false },
+      { text: "Spiders", correct: false },
+      { text: "Mice", correct: true },
+    ],
+  },
 ];
 
 const questionElement = document.getElementById("question");
@@ -84,6 +93,7 @@ function selectAnswer(e) {
 
   if (isCorrect) {
     selectedBtn.classList.add("correct");
+    score++;
   } else {
     selectedBtn.classList.add("incorrect");
   }
@@ -97,5 +107,29 @@ function selectAnswer(e) {
 
   nextButton.style.display = "block";
 }
+
+function showScore() {
+  resetState();
+  questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "Play again?";
+  nextButton.style.display = "block";
+}
+
+function handleNextButton() {
+  currentQuestionIdx++;
+  if (currentQuestionIdx < questions.length) {
+    showQuestion();
+  } else {
+    showScore();
+  }
+}
+
+nextButton.addEventListener("click", () => {
+  if (currentQuestionIdx < questions.length) {
+    handleNextButton();
+  } else {
+    startQuiz();
+  }
+});
 
 startQuiz();
