@@ -34,6 +34,7 @@ body {
   padding: 10px;
   margin: 10px 0 20px;
   border-radius: 5px;
+  transition: background-color 1s ease-in-out;
 }
 
 .container button {
@@ -72,10 +73,7 @@ body {
 .error {
   animation: shake 0.1s linear 10;
   background: #ff7474;
-}
-
-.error.shake {
-  animation: shake 0.1s linear 10;
+  transition: background-color 0.5s ease-in-out;
 }
 
 @keyframes shake {
