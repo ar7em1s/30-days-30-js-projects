@@ -6,4 +6,5 @@ let qrText = document.getElementById("qrText");
 
 function generateQR() {
   qrImage.src = apiUrl + qrText.value;
+  imgBox.classList.add("show-img");
 }
