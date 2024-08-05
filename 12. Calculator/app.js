@@ -1,11 +1,10 @@
 function equalFunc() {
-  let inputNumbers = document.getElementById("display-box");
+  let inputContent = document.getElementById("display-box");
 
-  if (inputNumbers.value) {
-    let result = eval(inputNumbers.value);
-
-    inputNumbers.value = result;
+  if (inputContent.value) {
+    let result = eval(inputContent.value);
+    inputContent.value = result;
   } else {
-    inputNumbers == "";
+    inputContent == "";
   }
 }
