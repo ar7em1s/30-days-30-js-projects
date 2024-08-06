@@ -59,3 +59,29 @@ function validateEmail() {
   emailError.innerHTML = `<i class="fa-solid fa-circle-check"></i>`;
   return true;
 }
+
+function validateMessage() {
+  let message = document.getElementById("contact-message").value;
+  let charRequired = 30;
+  let charLeft = charRequired - message.length;
+
+  if (charLeft > 0) {
+    messageError.innerHTML = charLeft + ` more character required!`;
+    return false;
+  }
+
+  messageError.innerHTML = `<i class="fa-solid fa-circle-check"></i>`;
+  return true;
+}
+
+function validateForm() {
+  if (!validateName() || !validatePhone || !validateEmail || !validateMessage) {
+    submitError.style.display = "block";
+    submitError.innerHTML = "Please, fill the required information!";
+    setTimeout(function () {
+      submitError.style.display = "none";
+    }, 3000);
+
+    return false;
+  }
+}
