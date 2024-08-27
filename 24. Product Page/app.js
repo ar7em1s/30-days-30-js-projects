@@ -26,9 +26,18 @@ btn[2].onclick = function () {
 
 function placeOrder() {
   order.innerHTML = "Thank you! Your order has been placed!";
-  order.classList.add("visible"); // Show the message
+  order.classList.add("visible");
 
   setTimeout(function () {
-    order.classList.remove("visible"); // Hide the message
-  }, 6000); // 3 seconds
+    order.classList.remove("visible");
+  }, 6000);
+}
+
+function addToCart() {
+  order.innerHTML = "The product is added to your cart!";
+  order.classList.add("visible");
+
+  setTimeout(function () {
+    order.classList.remove("visible");
+  }, 6000);
 }
