@@ -154,16 +154,21 @@
   border-radius: 12px;
 }
 
-form button {
+.button-container {
+  display: flex;
+  margin-top: 40px;
+  gap: 10px; /* Adds space between the buttons */
+}
+
+button {
+  flex: 1; /* Buttons take equal width */
   background: #553ff0;
   color: #fff;
-  font-size: 17px;
-  width: 100%;
+  font-size: 15px;
   padding: 10px;
   border-radius: 30px;
   border: 0;
   outline: 0;
-  margin-top: 50px;
   box-shadow: 0 10px 10px rgba(85, 63, 240, 0.25);
   cursor: pointer;
 }
@@ -186,4 +191,14 @@ form button {
 
 .btn.active {
   background: #553ff0;
+}
+
+#order {
+  color: #00d874;
+  font-size: 14px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 5px;
 }

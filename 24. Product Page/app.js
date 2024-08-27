@@ -1,5 +1,6 @@
 let productImg = document.getElementById("productImg");
 let btn = document.getElementsByClassName("btn");
+let order = document.getElementById("order");
 
 btn[0].onclick = function () {
   productImg.src = "images/image1.png";
@@ -22,3 +23,11 @@ btn[2].onclick = function () {
   }
   this.classList.add("active");
 };
+
+function placeOrder() {
+  order.innerHTML = "Thank you! Your order has been placed!";
+
+  setTimeout(function () {
+    order.innerHTML = "";
+  }, 6000);
+}
