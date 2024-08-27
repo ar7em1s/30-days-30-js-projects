@@ -26,8 +26,9 @@ btn[2].onclick = function () {
 
 function placeOrder() {
   order.innerHTML = "Thank you! Your order has been placed!";
+  order.classList.add("visible"); // Show the message
 
   setTimeout(function () {
-    order.innerHTML = "";
-  }, 6000);
+    order.classList.remove("visible"); // Hide the message
+  }, 6000); // 3 seconds
 }

@@ -33,7 +33,7 @@
 .gallery img {
   width: 100%;
   display: block;
-  padding-top: 100px;
+  padding-top: 115px;
 }
 
 .details {
@@ -157,11 +157,11 @@
 .button-container {
   display: flex;
   margin-top: 40px;
-  gap: 10px; /* Adds space between the buttons */
+  gap: 10px;
 }
 
 button {
-  flex: 1; /* Buttons take equal width */
+  flex: 1;
   background: #553ff0;
   color: #fff;
   font-size: 15px;
@@ -196,9 +196,13 @@ button {
 #order {
   color: #00d874;
   font-size: 14px;
-  display: block;
-  align-items: center;
-  justify-content: center;
   padding: 5px;
-  margin-top: 5px;
+  height: 20px;
+  margin-top: 10px;
+  line-height: 20px;
+  opacity: 0;
+}
+
+#order.visible {
+  opacity: 1; /* Make it visible */
 }
